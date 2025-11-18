@@ -1,0 +1,36 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.log
+*.tmp
+*.swp
+
+# Carpetas de dependencias (por si usas npm)
+node_modules/
+
+# Directorios de build (si usas herramientas de compilación)
+dist/
+build/
+out/
+
+# Configuración de editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos privados
+.env
+.env.local
+.env.*.local
+
+# Caché
+.cache/
+*.cache
+
+# Archivos de despliegue
+*.zip
+*.tar
+*.rar
