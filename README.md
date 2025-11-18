@@ -23,4 +23,20 @@ Proyectos menores, ampliaciones, remodelaciones y soluciones constructivas para 
 /assets → imágenes, logos e íconos
 /css → hojas de estilo
 /js → scripts
-index.html → página principal
+index.html → página principal que redirecciona al inicio
+/inicio
+/...otras paginas de la web
+
+## Formato de meta en archivos html
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FNyC Solutions: Limpieza, servicios técnicos, mantenciones y construcción. Soluciones confiables para el hogar y empresas.">
+    <meta name="author" content="Fernández, Núñez y Compañía Limitada">
+    <!-- Redes sociales -->
+    <meta property="og:title" content="FNyC Solutions">
+    <meta property="og:description" content="Soluciones prácticas y confiables para tu hogar y proyectos.">
+    <meta property="og:image" content="https://fnyc.cl/assets/logos/originales/1.png">
+    <meta property="og:url" content="https://fnyc.cl">
+    <meta property="og:type" content="website">
+</head>
