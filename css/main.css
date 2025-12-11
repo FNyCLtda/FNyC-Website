@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    background-color: rgb(var(--c-ba));
+}
+:root {
+    --c-ao: 25, 25, 45; /* azul oscuro */
+    --c-ba: 240, 244, 254; /* blanco azulado */
+    --c-do: 176, 155, 108; /* dorado */
+    --nav-size: 80px;
+    --shadow-1: 9px 9px 18px rgba(0, 0, 0, 0.25);
+    --shadow-2: 6px 6px 12px rgba(0, 0, 0, 0.5);
+}
+body {
+    font-family: lato, times, arial;
+    color: rgb(var(--c-ao));
+    margin: 0;
+    display: flex-box;
+}
+/* ____ */
+.navbar-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--nav-size);
+    width: 100%;
+    background-color: rgba(var(--c-ba),0.9);
+    box-shadow: 0 6px 12px 6px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 20;
+}
+.navbar-logocontainer {
+    height: 75%;
+    width: auto;
+    margin: 0 20px;
+}
+.navbar-logo {
+    height: 100%;
+    width: auto;
+    object-fit: fill;
+}
+.navbar-brandcontainer {
+    height: 75%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.navbar-brand {
+    color: inherit;
+    text-decoration: none;
+}
+.navbar-brand h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 300;
+    justify-content: center;
+}
+.navbar-brand h1 strong {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 500;
+    justify-content: center;
+    color: rgb(var(--c-do));
+}
+.navbar-menuimgcontainer {
+    display: none;
+    height: 40%;
+    width: auto;
+    margin: 0 20px;
+    justify-content: center;
+}
+.navbar-menuimg {
+    height: 100%;
+    width: auto;
+    object-fit: fill;
+}
+.navbar-menulinks {
+    height: 40%;
+    width: auto;
+    margin: 0 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+.navbar-menulinks a {
+    text-decoration: none;
+    color: inherit;
+    margin: 0 15px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.navbar-menulinks a:hover {
+    font-weight: 700;
+}
+@media (max-width: 768px) {
+    .navbar-menuimgcontainer {
+        display: flex;
+    }
+    .navbar-menulinks {
+        display: none;
+    }
+    .navbar-brand h1, .navbar-brand h1 strong {
+        font-size: 1.25rem;
+    }
+}
