@@ -20,7 +20,8 @@ body {
 }
 /* ____ */
 .navbar-container {
-    position: absolute;
+    padding: 10px 0;
+    position: fixed;
     top: 0;
     left: 0;
     height: var(--nav-size);
@@ -32,20 +33,26 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    z-index: 20;
+    z-index: 5;
 }
 .navbar-logocontainer {
-    height: 75%;
+    height: 100%;
     width: auto;
     margin: 0 20px;
 }
-.navbar-logo {
+.navbar-logo1 {
     height: 100%;
     width: auto;
     object-fit: fill;
 }
+.navbar-logo2 {
+    display: none;
+    object-fit: cover;
+    height: 100%;
+    width: auto;
+}
 .navbar-brandcontainer {
-    height: 75%;
+    height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -69,7 +76,7 @@ body {
 }
 .navbar-menuimgcontainer {
     display: none;
-    height: 40%;
+    height: 70%;
     width: auto;
     margin: 0 20px;
     justify-content: center;
@@ -78,9 +85,11 @@ body {
     height: 100%;
     width: auto;
     object-fit: fill;
+    opacity: 1;
+    cursor: pointer;
 }
 .navbar-menulinks {
-    height: 40%;
+    height: 70%;
     width: auto;
     margin: 0 20px;
     justify-content: center;
@@ -88,15 +97,81 @@ body {
     display: flex;
     flex-direction: row;
 }
-.navbar-menulinks a {
+.navbar-menulinks a, .navbar-menulinks p {
     text-decoration: none;
     color: inherit;
     margin: 0 15px;
     font-weight: 500;
     font-size: 1.2rem;
+    cursor: pointer;
 }
-.navbar-menulinks a:hover {
+.navbar-menulinks a:hover, .navbar-menulinks p:hover {
     font-weight: 700;
+}
+.navbar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+.navbar-overlay.active {
+    display: block;
+}
+.navbar-sidebar {
+    background-color: rgb(var(--c-ba));
+    box-shadow: 6px 0 6px 12px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 0;
+    right: -450px;
+    width: 75vw;
+    max-width: 450px;
+    height: 100vh;
+    z-index: 15;
+    opacity: 0;
+    transition: right 0.3s ease, opacity 0.5s ease;
+}
+.navbar-sidebar.active {
+    right: 0;
+    opacity: 1;
+}
+.navbar-1, .navbar-2 {
+    position: absolute;
+    top: 50px;
+    left: 500px;
+    width: 100%;
+    height: auto;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.5s ease, left 0.2s ease;
+    visibility: hidden;
+}
+.navbar-sidebar div a, .navbar-sidebar div p {
+    margin: 5px 0;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.navbar-sidebar div p strong {
+    font-weight: 300;
+    color: rgb(var(--c-do));
+    cursor: default;
+}
+.navbar-1.active {
+    opacity: 1;
+    visibility: visible;
+    left: 50px;
+}
+.navbar-2.active {
+    opacity: 1;
+    visibility: visible;
+    left: 50px;
 }
 @media (max-width: 768px) {
     .navbar-menuimgcontainer {
@@ -107,5 +182,16 @@ body {
     }
     .navbar-brand h1, .navbar-brand h1 strong {
         font-size: 1.25rem;
+    }
+}
+@media (max-width: 350px) {
+    .navbar-logo1 {
+        display: none;
+    }
+    .navbar-logo2 {
+        display: block;
+    }
+    .navbar-brandcontainer {
+        display: none;
     }
 }

@@ -1,17 +1,36 @@
 <nav class="navbar-container">
     <div class="navbar-logocontainer">
-        <a href="../inicio"><img class="navbar-logo" src="../assets/logos/simples/1.png" alt="Logo FNyC Solutions"></a>
+        <a href="../inicio"><img class="navbar-logo1" src="../assets/logos/simples/1.png" alt="Logo FNyC Solutions"></a>
+        <a href="../inicio"><img class="navbar-logo2" src="../assets/logos/originales/1.png" alt="Logo FNyC Solutions"></a>
     </div>
     <div class="navbar-brandcontainer">
         <a href="../inicio" class="navbar-brand"><h1><strong>FN</strong>y<strong>C</strong> SOLUTIONS</h1></a>
     </div>
     <div class="navbar-menuimgcontainer">
-        <img class="navbar-menuimg" src="../assets/img/menu.png" alt="">
+        <img class="navbar-menuimg" id="navbar-sidebarbutton1" onclick="sidebar1()" src="../assets/img/menu.png" alt="">
     </div>
     <div class="navbar-menulinks">
         <a href="../inicio">Inicio</a>
-        <a href="">Servicios</a>
+        <p id="navbar-sidebarbutton2" onclick="sidebar2()">Servicios</p>
         <a href="">Contacto</a>
-        <a href="">Mas...</a>
+        <p onclick="sidebar1()" id="navbar-sidebarbutton3">Mas...</p>
     </div>
+    <div class="navbar-sidebar" id="navbar-sidebar">
+        <div class="navbar-1" id="navbar-1">
+            <p onclick="back1()">←</p>
+            <a href="../inicio">Inicio</a>
+            <p onclick="sidebar2()">Servicios</p>
+            <a href="">Contacto</a>
+            <a href="">Sobre Nosotros</a>
+        </div>
+        <div class="navbar-2" id="navbar-2">
+            <p><strong>Servicios</strong></p>           
+            <p onclick="back2()" >←</p>
+            <a href="">WashCleanGroup (Limpieza)</a>
+            <a href="">Servicios de Construcción</a>
+            <a href="">Servicios Tecnicos</a>
+            <a href="">Servicios de Mantención</a>
+        </div>
+    </div>
+    <div class="navbar-overlay" id="navbar-overlay"></div>
 </nav>
