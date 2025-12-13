@@ -185,7 +185,15 @@ body {
         left: 35px;
     }
 }
-@media (max-width: 350px) {
+@media (max-width: 400px){
+    .navbar-sidebar div a, .navbar-sidebar div p {
+        font-size: 1.15rem;
+    }
+    .navbar-1.navbar-1.active, .navbar-2.navbar-2.active {
+        left: 30px;
+    }
+}
+    @media (max-width: 350px) {
     .navbar-logo1 {
         display: none;
     }
@@ -196,9 +204,9 @@ body {
         display: none;
     }
     .navbar-sidebar div a, .navbar-sidebar div p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     .navbar-1.navbar-1.active, .navbar-2.navbar-2.active {
-        left: 25px;
+        left: 20px;
     }
 }
