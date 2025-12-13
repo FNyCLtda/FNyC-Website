@@ -1,9 +1,6 @@
 * {
     box-sizing: border-box;
 }
-html {
-    background-color: rgb(var(--c-ba));
-}
 :root {
     --c-ao: 25, 25, 45; /* azul oscuro */
     --c-ba: 240, 244, 254; /* blanco azulado */
@@ -11,6 +8,10 @@ html {
     --nav-size: 80px;
     --shadow-1: 9px 9px 18px rgba(0, 0, 0, 0.25);
     --shadow-2: 6px 6px 12px rgba(0, 0, 0, 0.5);
+}
+html {
+    background-color: rgb(var(--c-ba));
+    margin-top: var(--nav-size);
 }
 body {
     font-family: lato, times, arial;
@@ -26,7 +27,7 @@ body {
     left: 0;
     height: var(--nav-size);
     width: 100%;
-    background-color: rgba(var(--c-ba),0.9);
+    background-color: rgba(var(--c-ao),0.4);
     box-shadow: 0 6px 12px 6px rgba(0, 0, 0, 0.25);
     overflow: hidden;
     display: flex;
@@ -34,6 +35,14 @@ body {
     align-items: center;
     justify-content: space-between;
     z-index: 5;
+    color: rgb(var(--c-ba));
+    text-shadow: 0px 0px 12px black;
+    transition: background-color 0.5s ease;
+}
+.navbar-container.notransparent {
+    background-color: rgba(var(--c-ba),0.9);
+    color: rgb(var(--c-ao));
+    text-shadow: none;
 }
 .navbar-logocontainer {
     height: 100%;
@@ -83,10 +92,23 @@ body {
 }
 .navbar-menuimg {
     height: 100%;
-    width: auto;
-    object-fit: fill;
-    opacity: 1;
+    width: var(--nav-size);
     cursor: pointer;
+
+    background-color: rgb(var(--c-ba));
+
+    mask-image: url(../assets/img/menu.png);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+
+    -webkit-mask-image: url(../assets/img/menu.png);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+}
+.navbar-menuimg.notransparent {
+    background-color: rgb(var(--c-ao));
 }
 .navbar-menulinks {
     height: 70%;

@@ -4,10 +4,60 @@ header {
     left: 0;
     width: 100%;
     height: auto;
-    z-index: 1;
+    z-index: 0;
 }
 .hero-img {
     width: 100%;
     object-fit: cover;
     height: 100vh;
+    z-index: 0;
+    filter: brightness(60%);
+    transition: filter 1s ease-in-out;
+}
+.hero-img:hover {
+    filter: brightness(70%);
+    transition: filter 1s ease-in-out;
+}
+.sectionheader {
+    position: absolute;
+    top: calc(50% + var(--nav-size) /2);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    border-radius: 8px;
+    min-height: 50vh;
+    background-color: rgba(var(--c-ba),0.75);
+    box-shadow: 0 6px 12px 6px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    padding: 75px;
+}
+.sectionheader h1 {
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: rgb(var(--c-ao));
+    text-align: left;
+    margin: 0;
+}
+.sectionheader p {
+    font-size: 1.5rem;
+    font-weight: 350;
+    color: rgb(var(--c-ao));
+    text-align: justify;
+    margin: 20px 0;
+}
+@media (max-width: 768px) {
+    .sectionheader {
+        width: 90%;
+        padding: 30px;
+    }
+    .sectionheader h1 {
+        font-size: 1.75rem;
+    }
+    .sectionheader p {
+        font-size: 1.125rem;
+    }
 }
