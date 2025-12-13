@@ -1,3 +1,4 @@
+// navbar
 fetch("../navbar.html")
 .then(res => res.text())
 .then(data => {
@@ -88,4 +89,11 @@ document.addEventListener("scroll", function(e) {
         overlay.classList.remove("active");
         lists.forEach(list => list && list.classList.remove("active"));
     }
+});
+
+//footer
+fetch("../footer.html")
+.then(res => res.text())
+.then(data => {
+    document.getElementById("footer-container").innerHTML = data;
 });

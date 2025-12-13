@@ -1,5 +1,16 @@
+.aviso-construccion {
+    background: rgba(var(--c-do),0.9);
+    color: rgb(var(--c-ao));
+    text-align: center;
+    padding: 12px;
+    font-weight: 500;
+    position: fixed;
+    top: var(--nav-size);
+    width: 100%;
+    z-index: 9999;
+}
 header {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -8,11 +19,14 @@ header {
 }
 .hero-img {
     width: 100%;
-    object-fit: cover;
     height: 100vh;
+    min-height: 550px;
     z-index: 0;
     filter: brightness(60%);
     transition: filter 1s ease-in-out;
+    background-image: url("../assets/img/fondo-encabezado.jpg");
+    background-position: center;
+    background-size: cover;
 }
 .hero-img:hover {
     filter: brightness(70%);
@@ -27,13 +41,14 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 75%;
+    width: 80%;
+    max-width: 900px;
     border-radius: 8px;
     min-height: 50vh;
     background-color: rgba(var(--c-ba),0.75);
     box-shadow: 0 6px 12px 6px rgba(0, 0, 0, 0.25);
     z-index: 1;
-    padding: 75px;
+    padding: 50px;
 }
 .sectionheader h1 {
     font-size: 2.25rem;

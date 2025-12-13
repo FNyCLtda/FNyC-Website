@@ -3,7 +3,8 @@
 }
 :root {
     --c-ao: 25, 25, 45; /* azul oscuro */
-    --c-ba: 240, 244, 254; /* blanco azulado */
+    /* --c-ba: 240, 244, 254; */
+    --c-ba: 255, 255, 255;
     --c-do: 176, 155, 108; /* dorado */
     --nav-size: 80px;
     --shadow-1: 9px 9px 18px rgba(0, 0, 0, 0.25);
@@ -11,7 +12,6 @@
 }
 html {
     background-color: rgb(var(--c-ba));
-    margin-top: var(--nav-size);
 }
 body {
     font-family: lato, times, arial;
@@ -19,7 +19,7 @@ body {
     margin: 0;
     display: flex-box;
 }
-/* ____ */
+/* Navbar */
 .navbar-container {
     padding: 10px 0;
     position: fixed;
@@ -196,6 +196,8 @@ body {
     visibility: visible;
     left: 40px;
 }
+
+/* Navbar Responsive */
 @media (max-width: 768px) {
     .navbar-menuimgcontainer {
         display: flex;
@@ -230,5 +232,71 @@ body {
     }
     .navbar-1.navbar-1.active, .navbar-2.navbar-2.active {
         left: 20px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: rgb(var(--c-ao)); /* azul oscuro */
+    color: rgb(var(--c-ba)); /* blanco azulado */
+    padding: 40px 20px 20px;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.25);
+}
+.footer__container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto 20px;
+}
+.footer__column {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    align-content: center;
+}
+.footer__logo {
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+.footer__column h3 {
+    font-size: 1.75rem;
+    font-weight: 350;
+    margin-bottom: 10px;
+}
+.footer__column a, .footer__column p {
+    color: rgb(var(--c-ba));
+    font-weight: 400;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.footer__icons {
+    width: 1rem;
+    height: auto;
+    margin-right: 10px;
+}
+.footer__column a:hover {
+    text-decoration: underline;
+}
+.footer__bottom {
+    font-size: 0.85rem;
+    color: rgb(var(--c-do));
+    border-top: 1px solid rgb(var(--c-do));
+    padding-top: 15px;
+}
+
+/* Footer Responsive */
+@media (max-width: 595px) {
+    .footer__container {
+        gap: 5px;
+    }
+    .footer__column h3 {
+        margin-top: 0;
+    }
+    .footer__container {
+        justify-content: center;
     }
 }
