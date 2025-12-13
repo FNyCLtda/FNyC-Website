@@ -7,7 +7,7 @@
     position: fixed;
     top: var(--nav-size);
     width: 100%;
-    z-index: 9999;
+    z-index: 50;
 }
 header {
     position: relative;
