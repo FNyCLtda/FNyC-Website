@@ -129,6 +129,7 @@ body {
     right: -450px;
     width: 75vw;
     max-width: 450px;
+    min-width: 300;
     height: 100vh;
     z-index: 15;
     opacity: 0;
@@ -155,7 +156,7 @@ body {
     margin: 5px 0;
     text-decoration: none;
     color: inherit;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     cursor: pointer;
 }
 .navbar-sidebar div p strong {
@@ -166,12 +167,12 @@ body {
 .navbar-1.active {
     opacity: 1;
     visibility: visible;
-    left: 50px;
+    left: 40px;
 }
 .navbar-2.active {
     opacity: 1;
     visibility: visible;
-    left: 50px;
+    left: 40px;
 }
 @media (max-width: 768px) {
     .navbar-menuimgcontainer {
@@ -180,8 +181,8 @@ body {
     .navbar-menulinks {
         display: none;
     }
-    .navbar-brand h1, .navbar-brand h1 strong {
-        font-size: 1.25rem;
+    .navbar-1.navbar-1.active, .navbar-2.navbar-2.active {
+        left: 35px;
     }
 }
 @media (max-width: 350px) {
@@ -193,5 +194,11 @@ body {
     }
     .navbar-brandcontainer {
         display: none;
+    }
+    .navbar-sidebar div a, .navbar-sidebar div p {
+        font-size: 1rem;
+    }
+    .navbar-1.navbar-1.active, .navbar-2.navbar-2.active {
+        left: 25px;
     }
 }
