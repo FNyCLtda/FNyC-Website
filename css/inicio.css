@@ -108,11 +108,16 @@ header {
     font-weight: 400;
     margin-bottom: 10px;
 }
-.section1 p {
+.section1 p, .section3 p {
     font-size: 1.2rem;
     font-weight: 375;
     text-align: justify;
     margin-bottom: 30px;
+}
+.section2 p {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 375;
 }
 .servicios-container {
     display: grid;
@@ -154,6 +159,34 @@ header {
     justify-self: center;
     padding: 10px;
     border-radius: 8px;
+}
+.quienes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+    width: 100%;
+    justify-content: center;
+}
+.quienes {
+    height: 50px;
+    width: 200px;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.3s ease-in-out, color 0.1s ease-in-out;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(var(--c-do));
+    color: rgb(var(--c-ba));
+}
+.quienes:hover {
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25);
+    background-color: rgb(var(--c-ba));
+    color: rgb(var(--c-do));
+    border: 1px solid rgb(var(--c-do));
 }
 @media (max-width: 575px) {
     .servicios-container {
