@@ -64,6 +64,22 @@ header {
     text-align: justify;
     margin: 20px 0;
 }
+.sectionheader a {
+    text-decoration: none;
+    color: rgb(var(--c-ao));
+    width: 100%;
+    background-color: rgba(var(--c-do),0.75);
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.sectionheader a:hover {
+    background-color: rgb(var(--c-ao));
+    color: rgb(var(--c-ba));
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 @media (max-width: 768px) {
     .sectionheader {
         width: 90%;
@@ -74,5 +90,73 @@ header {
     }
     .sectionheader p {
         font-size: 1.125rem;
+    }
+}
+.section1, .section2, .section3 {
+    height: auto;
+    margin: 10px 25px;
+    border-top: 1px solid rgb(var(--c-do));
+}
+.section1, .section2, .section3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section1 h2, .section2 h2, .section3 h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.section1 p {
+    font-size: 1.2rem;
+    font-weight: 375;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+.servicios-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 25px;
+    margin-bottom: 25px;
+}
+.servicios {
+    width: 100%;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.servicios:hover {
+    box-shadow: none;
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.25);
+}
+.servicios h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.razones-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 25px;
+}
+.razones {
+    min-width: 400px;
+    max-height: 150px;
+    border: 1px solid rgb(var(--c-do));
+    text-align: center;
+    justify-self: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+@media (max-width: 575px) {
+    .servicios-container {
+        grid-template-columns: 1fr;
     }
 }
