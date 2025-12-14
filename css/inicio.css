@@ -44,7 +44,7 @@ header {
     width: 80%;
     max-width: 900px;
     border-radius: 8px;
-    min-height: 50vh;
+    height: clamp(400px, 50vh, 500px);
     background-color: rgba(var(--c-ba),0.75);
     box-shadow: 0 6px 12px 6px rgba(0, 0, 0, 0.25);
     z-index: 1;
@@ -101,6 +101,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 .section1 h2, .section2 h2, .section3 h2 {
     font-size: 2rem;
@@ -141,10 +142,9 @@ header {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    overflow: hidden;
-    object-fit: cover;
     object-position: center;
     margin-bottom: 25px;
+    margin-top: 15px;
 }
 .razones {
     min-width: 400px;
@@ -158,5 +158,16 @@ header {
 @media (max-width: 575px) {
     .servicios-container {
         grid-template-columns: 1fr;
+    }
+    .razones-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .razones {
+        max-height: auto;
+        height: auto;
+        min-width: auto;
+        width: 100%;
+        padding: 5px;
     }
 }

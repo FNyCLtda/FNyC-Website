@@ -299,4 +299,11 @@ footer {
     .footer__container {
         justify-content: center;
     }
+    .footer__column {
+        text-align: center;
+        min-width: auto;
+    }
+    .footer__logo {
+        width: 80vw;
+    }
 }
