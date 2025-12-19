@@ -17,13 +17,14 @@
     <link rel="canonical" href="https://fnyc.cl/">
     
     <!-- Preload -->
-    <link rel="preload" href="" as="image" type="image/jpg">
+    <link rel="preload" href="/assets/img/fondo-encabezado.jpg" as="image" type="image/jpg">
 
     <!--Conexión css y js-->
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="../css/inicio.css">
+    <script src="/js/data/services.data.js"></script>
     <script defer src="/js/main.js"></script>
-    <script defer src=""></script>
+    <script defer src="/js/inicio.js"></script>
 
     <!--Fuentes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,17 +46,34 @@
             <a href="https://wa.me/56944416878?text=Hola%2C%20quisiera%20cotizar%20un%20servicio...">Solicita tu presupuesto sin compromiso hoy mismo --></a>
         </section>
     </header>
+    <section class="destacados">
+        <!-- <h2>Servicios destacados</h2> -->
+
+        <div class="carousel" id="svcCarousel">
+            <button class="carousel-btn prev" id="svcPrev" aria-label="Anterior">
+            ‹
+            </button>
+
+            <div class="carousel-viewport">
+            <div class="carousel-track" id="svcTrack"></div>
+            </div>
+
+            <button class="carousel-btn next" id="svcNext" aria-label="Siguiente">
+            ›
+            </button>
+        </div>
+    </section>
     <section class="section1">
         <h2>¿Qué hacemos?</h2>
         <p>Nuestra empresa está organizada en 4 departamentos principales, lo que nos permite entregar soluciones claras, especializadas y eficientes.</p>
         <div class="servicios-container">
             <div class="servicios">
                 <h3>🔧 Departamento de Instalaciónes</h3>
-                <p></p>
+                <p>Instalación profesional de filtros de agua, sistemas de gasfitería y soluciones técnicas para el hogar y la empresa, garantizando seguridad, eficiencia y un trabajo de calidad en cada proyecto.</p>
             </div>
             <div class="servicios">
                 <h3>🛠️ Departamento de Mantenciónes</h3>
-                <p>Mantención preventiva y correctiva para instalaciones, espacios comunes, viviendas y empresas. Enfocado en continuidad operativa y cuidado de infraestructura.</p>
+                <p>Mantención y terminaciones de obra, incluyendo pintura, reparaciones finales y ajustes técnicos en viviendas, espacios comunes y empresas, asegurando una correcta presentación y conservación de la infraestructura.</p>
             </div>
             <div class="servicios">
                 <h3>🏗️ Departamento de Construcciónes</h3>
