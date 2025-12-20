@@ -21,24 +21,17 @@ window.SERVICES = [
     featured: true
   },
   {
-    id: '',
-    name: 'Climatización',
-    description: 'Instalación y mantención de aire acondicionado.',
-    image: '/assets/img/servicios/climatizacion.png',
-    featured: true
-  },
-  {
     id: 'servicios-construcción',
     name: 'Terminación de obra',
     description: 'Orden y limpieza de obras terminadas.',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShAToDVbH8HrLBceHsR5D3R5JL-46lJw_AcA&s',
     featured: true
   },
-  {
-    id: 'servicios-construcción',
-    name: 'Terminación de obra',
-    description: 'Orden y limpieza de obras terminadas.',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShAToDVbH8HrLBceHsR5D3R5JL-46lJw_AcA&s',
+   {
+    id: 'servicios-mantenciones',
+    name: 'Mantención de piscinas',
+    description: 'Servicios de mantenimiento de piscinas.',
+    image: 'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s6050cf9370953be3/image/i6d9836cb3aa987b1/version/1556123288/image.jpg',
     featured: true
-  }
+  },
 ];
