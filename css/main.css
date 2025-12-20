@@ -305,6 +305,7 @@ footer:hover {
     }
     .footer__container {
         justify-content: center;
+        flex-direction: column;
     }
     .footer__column {
         text-align: center;

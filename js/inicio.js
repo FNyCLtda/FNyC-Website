@@ -9,6 +9,7 @@
   // Generar las tarjetas
   featured.forEach(service => {
     const card = document.createElement('article');
+    const msjWs = `Hola!, quisiera cotizar: ${service.name}`;
     card.className = 'carousel-card';
     card.innerHTML = `
       <div class="service-media">
@@ -16,7 +17,9 @@
         <div class="service-overlay">
           <h3 class="service-title">${service.name}</h3>
           <p class="service-desc">${service.description}</p>
-          <a href="/servicios/${service.id}" class="service-btn">Ver servicio</a>
+          <a href="https://wa.me/56944416878?text=${encodeURIComponent(msjWs)}." target="_blank" rel="noopener noreferrer" class="service-btn">
+            Cotizar
+          </a>
         </div>
       </div>
     `;
@@ -49,7 +52,7 @@
     scrollToIndex(index);
   }
 
-  let autoInterval = setInterval(autoScroll, 1500); // cada 3 segundos
+  let autoInterval = setInterval(autoScroll, 2000); // cada 3 segundos
 
   // Botones
   next.addEventListener('click', () => {
@@ -57,7 +60,7 @@
     index++;
     if (index >= cardCount) index = 0;
     scrollToIndex(index);
-    autoInterval = setInterval(autoScroll, 1500); // reanuda auto-scroll
+    autoInterval = setInterval(autoScroll, 2000); // reanuda auto-scroll
   });
 
   prev.addEventListener('click', () => {
@@ -65,7 +68,7 @@
     index--;
     if (index < 0) index = cardCount - 1;
     scrollToIndex(index);
-    autoInterval = setInterval(autoScroll, 1500);
+    autoInterval = setInterval(autoScroll, 2000);
   });
 
   // Ajuste al cambiar tamaño de ventana
