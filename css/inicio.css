@@ -85,6 +85,30 @@ header {
     color: rgb(var(--c-ba));
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+.scroll-arrow {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 25px;
+  font-weight: 300;
+  color: rgb(var(--c-ba));
+  cursor: pointer;
+  animation: arrowDown 1.5s infinite;
+}
+@keyframes arrowDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 12px);
+  }
+}
 @media (max-width: 768px) {
     .hero-img {
         min-height: 650px;
@@ -105,6 +129,9 @@ header {
    CARRUSEL SERVICIOS DESTACADOS
    =============================== */
 
+.carousel-section {
+    scroll-margin-top: var(--nav-size);
+}
 .carousel-viewport {
     margin: 10px 25px;
     border-top: 1px solid rgb(var(--c-do));
@@ -163,6 +190,10 @@ header {
     margin: 0;
     font-weight: 400;
 }
+.service-desc {
+    font-size: 1rem;
+    font-weight: 300;
+}
 .service-btn {
     padding: 5px;
     background-color: rgb(var(--c-do));
@@ -188,6 +219,22 @@ header {
     border: 1px solid rgb(var(--c-do));
     color: rgb(var(--c-do));
     box-shadow: 6px 6px 12px rgba(0,0,0,.25);
+}
+@media (max-width: 600px) {
+    .service-media {
+        width: calc(100vw - 115px);
+        box-shadow: inset 6px 6px 12px rgba(0,0,0,.25);
+    }
+    .service-title {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    .service-desc {
+        font-size: .9rem;
+        margin-top: 5px;
+        font-weight: 400;
+    }
+
 }
 
 /*  =====================
@@ -276,19 +323,21 @@ header {
     padding: 5px;
     border-radius: 8px;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
-    transition: box-shadow 0.3s ease-in-out, color 0.1s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out, color 0.1s ease-in-out, border 0.3s ease-in-out;
     font-size: 0.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(var(--c-do));
-    color: rgb(var(--c-ba));
+    background-color: rgb(var(--c-ba));
+    color: rgb(var(--c-do));
+    /* border: 1px solid rgb(var(--c-do)); */
+    border-left: 6px solid rgb(var(--c-do));
 }
 .quienes:hover {
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25);
-    background-color: rgb(var(--c-ba));
-    color: rgb(var(--c-do));
-    border: 1px solid rgb(var(--c-do));
+    color: rgb(var(--c-ao));
+    border: 1px solid rgb(var(--c-ao));
+    border-left: 6px solid rgb(var(--c-ao));
 }
 .section3 {
     border-bottom: 1px solid rgb(var(--c-do));
