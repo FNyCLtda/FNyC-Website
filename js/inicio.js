@@ -9,7 +9,7 @@
   // Generar las tarjetas
   featured.forEach(service => {
     const card = document.createElement('article');
-    const msjWs = `Hola!, quisiera cotizar: ${service.name}`;
+    const msjWs = `Hola, quisiera solicitar una cotización por ${service.name}.`;
     card.className = 'carousel-card';
     card.innerHTML = `
       <div class="service-media">
@@ -17,7 +17,7 @@
         <div class="service-overlay">
           <h3 class="service-title">${service.name}</h3>
           <p class="service-desc">${service.description}</p>
-          <a href="https://wa.me/56944416878?text=${encodeURIComponent(msjWs)}." target="_blank" rel="noopener noreferrer" class="service-btn">
+          <a href="https://wa.me/56944416878?text=${encodeURIComponent(msjWs)}" target="_blank" rel="noopener noreferrer" class="service-btn">
             Cotizar
           </a>
         </div>

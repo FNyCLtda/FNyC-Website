@@ -196,6 +196,11 @@ body {
     visibility: visible;
     left: 40px;
 }
+.navbar-2 a[aria-disabled="true"] {
+    cursor: default;
+    pointer-events: none;
+    opacity: .25;
+}
 
 /* Navbar Responsive */
 @media (max-width: 768px) {
