@@ -3,16 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <title>Documentos FNyC</title>
+  <style>
+    body {
+        background-color: rgb(25, 25, 45);
+        color: white;
+    }
+    a {
+        text-decoration: none;
+        color: rgb(176, 155, 108);
+    }
+    #lock {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 9999;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 16px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
-<h1>Documentos</h1>
+<!-- 🔒 Pantalla de bloqueo -->
+<div id="lock">
+  <h2>Acceso restringido</h2>
+  <input type="password" id="password" placeholder="Contraseña">
+  <button onclick="unlock()">Entrar</button>
+  <p id="error" style="color:#f87171; display:none;">Contraseña incorrecta</p>
+</div>
 
-<input type="text" id="search" placeholder="Buscar documentos…">
-<ul id="results"></ul>
+<!-- 📂 Contenido real -->
+<div id="content" style="display:none;">
+  <h1>Documentos</h1>
+  <a href="../inicio"><-- Back</a><br><br>
+  <input type="text" id="search" placeholder="Buscar documentos…">
+  <ul id="results"></ul>
+</div>
 
 <script>
-fetch("/api/docs")
+  const PASSWORD = "040522";
+  function unlock() {
+    const input = document.getElementById("password").value;
+    if (input === PASSWORD) {
+      localStorage.setItem("docs_access", "ok");
+      document.getElementById("lock").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    } else {
+      document.getElementById("error").style.display = "block";
+    }
+  }
+
+  // Mantener sesión
+  if (localStorage.getItem("docs_access") === "ok") {
+    document.getElementById("lock").style.display = "none";
+    document.getElementById("content").style.display = "block";
+  }
+</script>
+
+<!-- 🔍 Buscador -->
+<script>
+fetch("/docs/data/docs.json")
   .then(r => r.json())
   .then(docs => {
     const input = document.getElementById("search");
@@ -20,15 +80,17 @@ fetch("/api/docs")
 
     function render(list) {
       results.innerHTML = "";
-      list.forEach(doc => {
-        const li = document.createElement("li");
-        li.innerHTML = `<a href="${doc.path}" target="_blank">${doc.name}</a>`;
-        results.appendChild(li);
-      });
+      list
+        .filter(d => !d.path.endsWith("/index.html"))
+        .forEach(d => {
+          results.innerHTML += `
+            <li><a href="${d.path}" target="_blank">${d.name}</a></li>
+          `;
+        });
     }
 
-    input.addEventListener("input", () => {
-      const v = input.value.toLowerCase();
+    input.addEventListener("input", e => {
+      const v = e.target.value.toLowerCase();
       render(docs.filter(d => d.name.toLowerCase().includes(v)));
     });
 
