@@ -1,4 +1,25 @@
 (() => {
+  const params = new URLSearchParams(window.location.search);
+  const redirectMsj = document.getElementById('redirect-msj');
+  const overlay = document.getElementById("navbar-overlay");
+  if (params.get('from') == 'redirect') {
+    redirectMsj.style.display = 'block';
+    setTimeout(() => {
+      redirectMsj.style.opacity = '0';
+      setTimeout(() => {
+        redirectMsj.style.opacity = '1';
+        redirectMsj.style.display = 'none';
+      }, 1000);
+    }, 6000);
+  }
+})();
+
+
+//////////////////////////////////////
+// Carousel de servicios destacados //
+//////////////////////////////////////
+
+(() => {
   const track = document.getElementById('svcTrack');
   const prev = document.getElementById('svcPrev');
   const next = document.getElementById('svcNext');

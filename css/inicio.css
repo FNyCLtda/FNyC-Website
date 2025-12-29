@@ -8,6 +8,23 @@
     top: var(--nav-size);
     width: 100%;
     z-index: 50;
+    display: none;
+}
+.redirect-msj {
+    background: rgb(var(--c-ba));
+    color: rgb(var(--c-ao));
+    text-align: justify;
+    padding: 25px 50px;
+    font-weight: 300;
+    position: fixed;
+    top: var(--nav-size);
+    width: 100%;
+    z-index: 95;
+    display: none;
+    box-shadow: 12px 12px 24px rgba(0,0,0,0.25);
+    min-height: 100px;
+    font-size: 1.2rem;
+    transition: opacity 1s ease;
 }
 
 /*  =====================

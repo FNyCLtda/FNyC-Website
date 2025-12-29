@@ -8,7 +8,7 @@ Este repositorio contiene el sitio web oficial de la marca **FNyC Solutions**, u
 ### 🔹 Grupo de Limpieza
 Servicios de aseo y limpieza para hogares, edificios y espacios comunes.
 
-### 🔹 Grupo Técnico
+### 🔹 Grupo de instaciones
 Detección de fugas, gasfitería, instalación y venta de filtros de agua, y soluciones técnicas en general.
 
 ### 🔹 Grupo de Mantenciones
