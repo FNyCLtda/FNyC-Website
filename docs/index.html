@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Documentos FNyC</title>
+</head>
+<body>
+
+<h1>Documentos</h1>
+
+<input type="text" id="search" placeholder="Buscar documentos…">
+<ul id="results"></ul>
+
+<script>
+fetch("/api/docs")
+  .then(r => r.json())
+  .then(docs => {
+    const input = document.getElementById("search");
+    const results = document.getElementById("results");
+
+    function render(list) {
+      results.innerHTML = "";
+      list.forEach(doc => {
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="${doc.path}" target="_blank">${doc.name}</a>`;
+        results.appendChild(li);
+      });
+    }
+
+    input.addEventListener("input", () => {
+      const v = input.value.toLowerCase();
+      render(docs.filter(d => d.name.toLowerCase().includes(v)));
+    });
+
+    render(docs);
+  });
+</script>
+
+</body>
+</html>
