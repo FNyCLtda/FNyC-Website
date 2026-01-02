@@ -44,14 +44,14 @@ header {
     height: 100vh;
     min-height: 550px;
     z-index: 0;
-    filter: brightness(60%);
+    filter: brightness(40%);
     transition: filter 1s ease-in-out;
     background-image: url("../assets/img/fondo-encabezado.jpg");
     background-position: center;
     background-size: cover;
 }
 .hero-img:hover {
-    filter: brightness(70%);
+    filter: brightness(40%);
     transition: filter 1s ease-in-out;
 }
 .sectionheader {
@@ -65,30 +65,33 @@ header {
     align-items: center;
     width: 80%;
     max-width: 900px;
-    border-radius: 8px;
+    border-radius: 18px;
     height: clamp(auto, 50vh, 500px);
-    background-color: rgba(var(--c-ba),0.75);
-    box-shadow: 0 6px 12px 6px rgba(0, 0, 0, 0.25);
     z-index: 1;
-    padding: 50px;
+    padding: 0;
 }
 .sectionheader h1 {
-    font-size: 2.25rem;
-    font-weight: 400;
-    color: rgb(var(--c-ao));
+    font-size: 2.75rem;
+    font-weight: 350;
+    color: rgb(var(--c-ba));
     text-align: left;
     margin: 0;
+    margin-bottom: 25px;
 }
 .sectionheader p {
     font-size: 1.5rem;
-    font-weight: 350;
-    color: rgb(var(--c-ao));
+    font-weight: 300;
+    color: rgb(var(--c-ba));
     text-align: justify;
     margin: 20px 0;
 }
-.sectionheader a {
+.to-page {
     text-decoration: none;
-    color: rgb(var(--c-ao));
+    color: rgb(var(--c-do));
+}
+.cta {
+    text-decoration: none;
+    color: rgb(var(--c-ba));
     width: 100%;
     background-color: rgba(var(--c-do),0.75);
     font-size: 1.1rem;
@@ -97,7 +100,7 @@ header {
     border-radius: 8px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-.sectionheader a:hover {
+.cta:hover {
     background-color: rgb(var(--c-ao));
     color: rgb(var(--c-ba));
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -259,9 +262,11 @@ header {
     =====================  */
 
 .section1, .section2, .section3 {
+    scroll-margin-top: calc(var(--nav-size) + 10px);
     height: auto;
     margin: 10px 25px;
     border-top: 1px solid rgb(var(--c-do));
+    padding: 25px;
 }
 .section1, .section2, .section3, .section4 {
     display: flex;
@@ -288,19 +293,17 @@ header {
 .servicios-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    grid-gap: 25px;
+    grid-gap: 15px;
     margin-bottom: 25px;
 }
 .servicios {
     width: 100%;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25);
-    transition: box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-.servicios:hover {
-    box-shadow: none;
-    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.25);
+    padding: 0 25px;
+    text-align: justify;
+    border-left: 6px solid rgb(var(--c-do));
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
 }
 .servicios h3 {
     font-size: 1.5rem;
