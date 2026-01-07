@@ -1,68 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Google tag (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7GEME94670"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-7GEME94670');
     </script>
-
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="FNyC Solutions: Limpieza, servicios técnicos, mantenciones y construcción. Soluciones confiables para el hogar y empresas.">
     <meta name="author" content="Fernández, Núñez y Compañía Limitada">
-    <!-- Redes sociales -->
-    <meta property="og:title" content="FNyC SOLUTIONS">
+    <meta name="description" content="FNyC Solutions: Un solo proveedor para mantención integral, limpieza, obras menores y soluciones técnicas, con respuesta oportuna, orden operativo y control claro en cada trabajo.">
+    <meta property="og:title" content="Inicio – FNyC Solutions">
     <meta property="og:description" content="Soluciones prácticas y confiables para tu hogar y empresa.">
     <meta property="og:image" content="https://fnyc.cl/assets/logos/originales/1.png">
-    <meta property="og:url" content="https://fnyc.cl">
+    <meta property="og:url" content="https://fnyc.cl/inicio">
     <meta property="og:type" content="website">
 
-    <title>Inicio - FNyC SOLUTIONS</title>
+    <title>Inicio – FNyC Solutions</title>
+    <link rel="canonical" href="https://fnyc.cl/inicio">
     <link rel="icon" href="/assets/logos/simples/1.png" type="image/png">
-    <link rel="canonical" href="https://fnyc.cl/">
-    
-    <!-- Preload -->
-    <link rel="preload" href="/assets/img/fondo-encabezado.jpg" as="image" type="image/jpg">
 
-    <!--Conexión css y js-->
+    <link rel="preload" href="/assets/img/fondo-encabezado.jpg" as="image" type="image/jpg">
+    
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="../css/inicio.css">
-    <script src="/js/data/services.data.js"></script>
+    <link rel="stylesheet" href="/css/inicio.css">
+    
     <script defer src="/js/main.js"></script>
     <script defer src="/js/inicio.js"></script>
+    <script src="/js/data/services.data.js"></script>
 
-    <!--Fuentes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="aviso-construccion">
-        🚧 Esta página está en construcción. Algunos contenidos pueden no estar disponibles.
-    </div>
+    <!--========================== 
+        Navbar
+    ===========================-->
+    <!-- Barra de navegación -->
+    <nav>
+        <div id="navbar-container"></div>
+    </nav>
+
+    <!-- Mensaje de redirección -->
     <div class="redirect-msj" id="redirect-msj">
         ❗ Redirección automática
         La empresa WashClean Group ya no opera en el dominio washcleangroup.cl. Nos hemos trasladado oficialmente a FNyC Solutions&trade; en fnyc.cl para continuar entregando nuestros servicios con la misma calidad y respaldo.
     </div>
-    <nav>
-        <div id="navbar-container"></div>
-    </nav>
+    
+    <!--========================== 
+        Header
+    ===========================-->
     <header>
         <div class="hero-img"></div>
+
+        <!-- Seccion de encabezado -->
         <section class="sectionheader">
             <h1>Mantención integral para edificios, empresas y condominios</h1>
-            <p>Un solo proveedor para limpieza, mantención, obras menores y soluciones técnicas, con respuesta oportuna, orden operativo y control claro en cada trabajo.
-                <br><a class="to-page" href="../edificios/">Pagina edificios y condominios →</a> | <a class="to-page" href="../educacion/">Pagina centros educacionales →</a>
+            <p>Un solo proveedor para mantención integral, limpieza, obras menores y soluciones técnicas, con respuesta oportuna, orden operativo y control claro en cada trabajo.
+                <br><a class="to-page" href="/edificios/">Pagina edificios y condominios →</a> | <a class="to-page" href="/educacion/">Pagina centros educacionales →</a>
             </p>
             <a class="cta" href="https://wa.me/56944416878?text=Hola%2C%20quisiera%20cotizar%20un%20servicio...">Solicita tu presupuesto sin compromiso hoy mismo ↗</a>
         </section>
+
+        <!-- Flecha para scroll -->
         <div class="scroll-arrow" onclick="document.querySelector('#seccion1').scrollIntoView({ behavior: 'smooth' })">▼</div>
+
     </header>
+
+    <!--========================== 
+        Sección 1
+    ===========================-->
     <section class="section1" id="seccion1">
         <h2>¿Qué hacemos?</h2>
         <p>Entregamos servicios de mantención integral para edificios, condominios, empresas, colegios y viviendas, cubriendo todas las necesidades operativas, técnicas y de conservación de la infraestructura. Trabajamos con un enfoque organizado y preventivo, lo que nos permite intervenir de forma eficiente, reducir incidencias y mantener los espacios en condiciones óptimas, con un solo proveedor y un control claro de cada trabajo.</p>
@@ -85,6 +96,10 @@
             </div>
         </div>
     </section>
+    
+    <!--========================== 
+        Sección Carrusel Servicios Destacados
+    ===========================-->
     <section class="carousel-section" id="servicios-destacados">
         <div class="carousel-viewport">
             <button class="carousel-btn prev" id="svcPrev" aria-label="Anterior">‹</button>
@@ -92,6 +107,10 @@
             <button class="carousel-btn next" id="svcNext" aria-label="Siguiente">›</button>
         </div>
     </section>
+
+    <!--========================== 
+        Sección 2
+    ===========================-->
     <section class="section2">
         <h2>¿Por qué elegirnos?</h2>
         <div class="razones-container">
@@ -117,6 +136,10 @@
             </div>
         </div>
     </section>
+
+    <!--========================== 
+        Sección 3
+    ===========================-->
     <section class="section3">
         <h2>¿A quíenes ayudamos?</h2>
         <p>Atendemos distintos tipos de clientes con un enfoque integral, adaptando nuestros servicios a cada necesidad.</p>
@@ -144,6 +167,10 @@
             </div>
         </div>
     </section>
+
+    <!--========================== 
+        Sección 4
+    ===========================-->
     <section class="section4">
         <div class="end-text">
             <h3>¿Tienes una necesidad específica o un proyecto en mente?</h3>
@@ -156,6 +183,10 @@
             </div>
         </div>
     </section>
+
+    <!--========================== 
+        Footer
+    ===========================-->
     <footer>
         <div id="footer-container"></div>
     </footer>

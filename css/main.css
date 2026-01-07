@@ -1,11 +1,15 @@
+/* ==============================
+    Configuraciones iniciales
+   ============================== */
+
 * {
     box-sizing: border-box;
 }
 :root {
-    --c-ao: 25, 25, 45; /* azul oscuro */
+    --c-ao: 25, 25, 45;
     /* --c-ba: 240, 244, 254; */
     --c-ba: 255, 255, 255;
-    --c-do: 176, 155, 108; /* dorado */
+    --c-do: 176, 155, 108;
     --nav-size: 80px;
     --shadow-1: 9px 9px 18px rgba(0, 0, 0, 0.25);
     --shadow-2: 6px 6px 12px rgba(0, 0, 0, 0.5);
@@ -19,14 +23,18 @@ body {
     margin: 0;
     display: flex-box;
 }
-/* Navbar */
+/* ==============================
+    Navbar
+   ============================== */
+
+/* Navbar principal */
 .navbar-container {
     padding: 10px 0;
     position: fixed;
     top: 0;
     left: 0;
     height: var(--nav-size);
-    width: 100%;
+    width: 100vw;
     background-color: rgba(var(--c-ao),0.4);
     box-shadow: 0 6px 12px 6px rgba(0, 0, 0, 0.25);
     overflow: hidden;
@@ -94,15 +102,12 @@ body {
     height: 100%;
     width: var(--nav-size);
     cursor: pointer;
-
     background-color: rgb(var(--c-ba));
-
-    mask-image: url(../assets/img/menu.png);
+    mask-image: url(/assets/img/menu.png);
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
-
-    -webkit-mask-image: url(../assets/img/menu.png);
+    -webkit-mask-image: url(/assets/img/menu.png);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
     -webkit-mask-size: contain;
@@ -130,6 +135,8 @@ body {
 .navbar-menulinks a:hover, .navbar-menulinks p:hover {
     font-weight: 700;
 }
+
+/* Navbar Sidebar */
 .navbar-overlay {
     display: none;
     position: fixed;
@@ -202,7 +209,46 @@ body {
     opacity: .25;
 }
 
-/* Navbar Responsive */
+/* ==============================
+    Avisos fijos
+   ============================== */
+
+/* Aviso de construcción */
+.aviso-construccion {
+    background: rgba(var(--c-do),.9);
+    color: rgb(var(--c-ao));
+    text-align: center;
+    padding: 12px;
+    font-weight: 500;
+    position: fixed;
+    top: var(--nav-size);
+    width: 100vw;
+    z-index: 50;
+    display: none;
+}
+
+/* Aviso de redirección */
+.redirect-msj {
+    background: rgba(var(--c-ba), .9);
+    color: rgb(var(--c-ao));
+    text-align: justify;
+    padding: 40px 50px;
+    font-weight: 300;
+    position: fixed;
+    top: var(--nav-size);
+    width: 100%;
+    z-index: 95;
+    box-shadow: 12px 12px 24px rgba(0,0,0,0.25);
+    min-height: 100px;
+    font-size: 1.2rem;
+    transition: opacity 0.5s ease;
+    display: none;
+}
+
+/* ==============================
+    Navbar Responsive
+   ============================== */
+
 @media (max-width: 768px) {
     .navbar-menuimgcontainer {
         display: flex;
@@ -240,10 +286,12 @@ body {
     }
 }
 
-/* Footer */
+/* ==============================
+    Footer
+   ============================== */
 footer {
-    background-color: rgb(var(--c-ao)); /* azul oscuro */
-    color: rgb(var(--c-ba)); /* blanco azulado */
+    background-color: rgb(var(--c-ao));
+    color: rgb(var(--c-ba));
     padding: 40px 20px 20px;
     font-size: 14px;
     text-align: center;
@@ -300,7 +348,10 @@ footer:hover {
     padding-top: 15px;
 }
 
-/* Footer Responsive */
+/* ==============================
+    Footer Responsive
+   ============================== */
+
 @media (max-width: 595px) {
     .footer__container {
         gap: 5px;
