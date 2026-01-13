@@ -29,7 +29,7 @@ body {
 
 /* Navbar principal */
 .navbar-container {
-    padding: 10px 0;
+    padding: 10px 30px;
     position: fixed;
     top: 0;
     left: 0;
@@ -55,12 +55,13 @@ body {
 .navbar-logocontainer {
     height: 100%;
     width: auto;
-    margin: 0 20px;
+    margin: 0 20px 0 0;
 }
 .navbar-logo1 {
     height: 100%;
     width: auto;
     object-fit: fill;
+    border-radius: 1px;
 }
 .navbar-logo2 {
     display: none;
@@ -118,7 +119,7 @@ body {
 .navbar-menulinks {
     height: 70%;
     width: auto;
-    margin: 0 20px;
+    margin: 0;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -128,12 +129,12 @@ body {
     text-decoration: none;
     color: inherit;
     margin: 0 15px;
-    font-weight: 500;
-    font-size: 1.2rem;
+    font-weight: 300;
+    font-size: 1.25rem;
     cursor: pointer;
 }
 .navbar-menulinks a:hover, .navbar-menulinks p:hover {
-    font-weight: 700;
+    text-decoration: underline;
 }
 
 /* Navbar Sidebar */
