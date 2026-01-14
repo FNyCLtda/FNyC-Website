@@ -22,15 +22,11 @@ header {
     height: 100vh;
     min-height: 625px;
     z-index: 0;
-    filter: brightness(60%);
+    filter: brightness(80%);
     transition: filter 1s ease-in-out;
-    background-image: url("../assets/img/fondo-encabezado-contacto.png");
+    background-image: url("../assets/img/contacto/encabezado-img.jpg");
     background-position: center;
     background-size: cover;
-}
-.hero-img:hover {
-    filter: brightness(70%);
-    transition: filter 1s ease-in-out;
 }
 .sectionheader {
     position: absolute;
@@ -42,9 +38,9 @@ header {
     justify-content: left;
     width: 80%;
     max-width: 900px;
-    border-radius: 8px;
+    border-radius: 18px;
     height: clamp(auto, 50vh, 500px);
-    background-color: rgba(var(--c-ba),0.9);
+    background-color: rgb(var(--c-ba));
     box-shadow: 0 6px 12px 6px rgba(0, 0, 0, 0.25);
     z-index: 1;
     padding: 50px 50px;

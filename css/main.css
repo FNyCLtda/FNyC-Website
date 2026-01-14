@@ -199,6 +199,11 @@ body {
     visibility: visible;
     left: 40px;
 }
+.navbar-1 a[aria-disabled="true"] {
+    cursor: default;
+    pointer-events: none;
+    opacity: .25;
+}
 .navbar-2.active {
     opacity: 1;
     visibility: visible;
