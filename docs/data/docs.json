@@ -4,6 +4,10 @@
     "path": "/docs/index.html"
   },
   {
+    "name": "Imp FL Servicios domicilios - Qrdom1.pdf",
+    "path": "/docs/Flyers/Imp FL Servicios domicilios - Qrdom1.pdf"
+  },
+  {
     "name": "mant-dark-1.pdf",
     "path": "/docs/tarjeta/mant-dark-1.pdf"
   },
@@ -14,5 +18,9 @@
   {
     "name": "mant-dark-A4.pdf",
     "path": "/docs/tarjeta/imprimir/mant-dark-A4.pdf"
+  },
+  {
+    "name": "Imp TP Servicios instalaciones - Qr1 .pdf",
+    "path": "/docs/Tarjetas/Imp TP Servicios instalaciones - Qr1 .pdf"
   }
 ]
