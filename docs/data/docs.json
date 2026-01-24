@@ -4,6 +4,10 @@
     "path": "/docs/index.html"
   },
   {
+    "name": "FL Servicios domicilios - Qrdom1.pdf",
+    "path": "/docs/Flyers/FL Servicios domicilios - Qrdom1.pdf"
+  },
+  {
     "name": "Imp FL Servicios domicilios - Qrdom1.pdf",
     "path": "/docs/Flyers/Imp FL Servicios domicilios - Qrdom1.pdf"
   },
@@ -22,5 +26,9 @@
   {
     "name": "Imp TP Servicios instalaciones - Qr1 .pdf",
     "path": "/docs/Tarjetas/Imp TP Servicios instalaciones - Qr1 .pdf"
+  },
+  {
+    "name": "TP Servicios instalaciones - Qr1 .pdf",
+    "path": "/docs/Tarjetas/TP Servicios instalaciones - Qr1 .pdf"
   }
 ]
