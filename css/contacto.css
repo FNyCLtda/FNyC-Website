@@ -22,11 +22,13 @@ header {
     height: 100vh;
     min-height: 625px;
     z-index: 0;
-    filter: brightness(80%);
+    filter: brightness(60%);
     transition: filter 1s ease-in-out;
     background-image: url("../assets/img/contacto/encabezado-img.jpg");
-    background-position: center;
+    background-position: center top;
     background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 .sectionheader {
     position: absolute;
@@ -38,7 +40,7 @@ header {
     justify-content: left;
     width: 80%;
     max-width: 900px;
-    border-radius: 18px;
+    border-radius: 10px;
     height: clamp(auto, 50vh, 500px);
     background-color: rgb(var(--c-ba));
     box-shadow: 0 6px 12px 6px rgba(0, 0, 0, 0.25);

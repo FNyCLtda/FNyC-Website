@@ -22,11 +22,13 @@ header {
     height: 100vh;
     min-height: 500px;
     z-index: 0;
-    filter: brightness(40%);
+    filter: brightness(30%);
     transition: filter 1s ease-in-out;
     background-image: url("../assets/img/inicio/encabezado-img.jpg");
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 .sectionheader {
     position: absolute;
