@@ -308,7 +308,7 @@ header {
     Formulario de contacto
     =====================  */
 .form-section {
-    background-image: url('/assets/img/inicio/contact-img.jpg');
+    background-image: url('/assets/img/inicio/contact-img.webp');
     width: 100%;
     min-height: 300px;
     height: auto;

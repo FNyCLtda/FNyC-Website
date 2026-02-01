@@ -24,7 +24,7 @@ header {
     z-index: 0;
     filter: brightness(60%);
     transition: filter 1s ease-in-out;
-    background-image: url("../assets/img/contacto/encabezado-img.jpg");
+    background-image: url("../assets/img/contacto/encabezado-img.webp");
     background-position: center top;
     background-size: cover;
     background-attachment: fixed;
